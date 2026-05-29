@@ -1,10 +1,8 @@
-// ===== NAV SCROLL =====
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 20);
 });
 
-// ===== MOBILE MENU =====
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobile-nav');
 const mobileClose = document.getElementById('mobile-close');
@@ -31,7 +29,6 @@ function closeMobileNav() {
   document.body.style.overflow = '';
 }
 
-// ===== ACTIVE NAV LINK =====
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav__links a, .nav__mobile a').forEach(link => {
   const href = link.getAttribute('href');
@@ -40,23 +37,20 @@ document.querySelectorAll('.nav__links a, .nav__mobile a').forEach(link => {
   }
 });
 
-// ===== EMAIL FORM =====
 function handleEmailSignup(e) {
   e.preventDefault();
   const input = e.target.querySelector('input[type="email"]');
   if (!input || !input.value) return;
-  showToast('Thank you! You\'ll hear from us soon. 🌟');
+  showToast('Thank you! You\'ll hear from us soon.');
   input.value = '';
 }
 
-// ===== CONTACT FORM =====
 function handleContactForm(e) {
   e.preventDefault();
   showToast('Your message has been sent. We\'ll be in touch!');
   e.target.reset();
 }
 
-// ===== TOAST =====
 function showToast(message) {
   let toast = document.getElementById('toast');
   if (!toast) {
@@ -70,9 +64,7 @@ function showToast(message) {
   setTimeout(() => toast.classList.remove('show'), 4000);
 }
 
-// ===== SCROLL REVEAL =====
 const revealEls = document.querySelectorAll('[data-reveal]');
-
 if (revealEls.length) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -92,7 +84,6 @@ if (revealEls.length) {
   });
 }
 
-// ===== ATTACH FORMS =====
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.js-signup-form').forEach(f => f.addEventListener('submit', handleEmailSignup));
   document.querySelectorAll('.js-contact-form').forEach(f => f.addEventListener('submit', handleContactForm));
