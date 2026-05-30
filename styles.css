@@ -76,13 +76,13 @@ p:last-child { margin-bottom: 0; }
 }
 
 .btn--primary {
-  background: var(--amber);
+  background: #1a1a1a;
   color: var(--white);
-  border-color: var(--amber);
+  border-color: #1a1a1a;
 }
 .btn--primary:hover {
-  background: var(--orange-deep);
-  border-color: var(--orange-deep);
+  background: var(--amber);
+  border-color: var(--amber);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
