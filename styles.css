@@ -715,7 +715,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .footer__brand .nav__logo { color: var(--white); margin-bottom: 16px; }
-.footer__brand p { font-size: 0.9rem; max-width: 280px; line-height: 1.7; }
+.footer__brand p { font-size: 0.9rem; max-width: 280px; line-height: 1.7; color: #ffffff; }
 
 .footer__col h4 {
   color: var(--white);
