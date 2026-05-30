@@ -702,7 +702,7 @@ p:last-child { margin-bottom: 0; }
 
 /* ===== FOOTER ===== */
 .footer {
-  background: var(--dark);
+  background: #000000;
   color: rgba(255,255,255,0.7);
   padding: 64px 0 32px;
 }
