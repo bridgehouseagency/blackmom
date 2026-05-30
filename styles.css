@@ -442,7 +442,10 @@ p:last-child { margin-bottom: 0; }
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--orange-deep);
+  font-style: normal;
+  line-height: 1;
 }
 
 .card h3 { color: var(--dark); margin-bottom: 12px; }
