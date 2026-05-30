@@ -10,37 +10,102 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .program-full { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; padding:72px 0; }
-    .program-full:not(:last-child) { border-bottom:1px solid rgba(232,146,26,0.1); }
-    .program-full.reverse { direction:rtl; }
-    .program-full.reverse > * { direction:ltr; }
-    .program-visual { border-radius:var(--radius-lg); overflow:hidden; background:linear-gradient(135deg,var(--amber-pale),rgba(245,185,66,0.2)); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:16px; }
-    .program-visual__icon { font-size:5rem; }
-    .program-visual__label { font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--orange-deep); }
-    .program-detail h2 { color:var(--dark); margin-bottom:16px; }
-    .program-detail p { color:var(--muted); margin-bottom:12px; }
-    .program-detail ul { list-style:none; margin-top:20px; display:flex; flex-direction:column; gap:10px; }
-    .program-detail ul li { display:flex; align-items:flex-start; gap:12px; font-size:0.93rem; color:var(--mid); }
-    .program-detail ul li::before { content:'→'; color:var(--amber); font-weight:700; flex-shrink:0; margin-top:1px; }
-    @media(max-width:768px){ .program-full{grid-template-columns:1fr;gap:32px;} .program-full.reverse{direction:ltr;} }
+    .program-full {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      padding: 72px 0;
+    }
+    .program-full:not(:last-child) {
+      border-bottom: 1px solid rgba(232,146,26,0.1);
+    }
+    .program-full.reverse { direction: rtl; }
+    .program-full.reverse > * { direction: ltr; }
+    .program-visual {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--amber-pale), rgba(245,185,66,0.2));
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .program-visual__icon { font-size: 5rem; }
+    .program-visual__label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange-deep);
+    }
+    .program-detail h2 { color: var(--dark); margin-bottom: 16px; }
+    .program-detail p { color: var(--muted); margin-bottom: 12px; }
+    .program-detail ul {
+      list-style: none;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .program-detail ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.93rem;
+      color: var(--mid);
+    }
+    .program-detail ul li::before {
+      content: '→';
+      color: var(--amber);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    @media (max-width: 768px) {
+      .program-full { grid-template-columns: 1fr; gap: 32px; }
+      .program-full.reverse { direction: ltr; }
+    }
   </style>
 </head>
 <body>
+
+<!-- ===== NAVIGATION ===== -->
 <nav class="nav" id="nav">
-  <div class="container"><div class="nav__inner">
-    <a href="index.html" class="nav__logo">
-      <img src="Black%20Moms%20NB%20Logo.png" alt="Black Moms NB" style="height:60px;width:auto;display:block;" />
-    </a>
-    <ul class="nav__links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="programs.html">Programs</a></li><li><a href="contact.html">Contact</a></li></ul>
-    <div class="nav__cta"><a href="contact.html" class="btn btn--primary">Get Connected</a></div>
-    <button class="nav__hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
-  </div></div>
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="Black%20Moms%20NB%20Logo.png" alt="Black Moms NB" style="height:60px;width:auto;display:block;" />
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="contact.html" class="btn btn--primary">Get Connected</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
 </nav>
 <div class="nav__mobile" id="mobile-nav">
   <button class="nav__mobile-close" id="mobile-close">&times;</button>
-  <a href="index.html">Home</a><a href="about.html">About</a><a href="team.html">Team</a><a href="programs.html">Programs</a><a href="contact.html">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="team.html">Team</a>
+  <a href="programs.html">Programs</a>
+  <a href="contact.html">Contact</a>
   <a href="contact.html" class="btn btn--primary" style="margin-top:16px;">Get Connected</a>
 </div>
+
+<!-- ===== PAGE HERO ===== -->
 <div class="page-offset">
   <section class="page-hero">
     <div class="container page-hero__inner">
@@ -50,85 +115,183 @@
     </div>
   </section>
 </div>
+
+<!-- ===== PROGRAM OVERVIEW CARDS ===== -->
 <section class="section--sm" style="background:var(--white);">
   <div class="container">
     <div class="grid-4">
-      <a href="#conversations" style="text-decoration:none;"><div class="card" style="text-align:center;" data-reveal><div class="card__icon" style="margin:0 auto 16px;">💬</div><h4>Community Conversations</h4></div></a>
-      <a href="#navigation" style="text-decoration:none;"><div class="card" style="text-align:center;" data-reveal><div class="card__icon" style="margin:0 auto 16px;">🧭</div><h4>Systems Navigation</h4></div></a>
-      <a href="#resources" style="text-decoration:none;"><div class="card" style="text-align:center;" data-reveal><div class="card__icon" style="margin:0 auto 16px;">📋</div><h4>Resources &amp; Tools</h4></div></a>
-      <a href="#training" style="text-decoration:none;"><div class="card" style="text-align:center;" data-reveal><div class="card__icon" style="margin:0 auto 16px;">🏫</div><h4>Training &amp; Collaboration</h4></div></a>
+      <a href="#conversations" style="text-decoration:none;">
+        <div class="card" style="text-align:center;" data-reveal>
+          <div class="card__icon" style="margin:0 auto 16px;">💬</div>
+          <h4>Community Conversations</h4>
+        </div>
+      </a>
+      <a href="#navigation" style="text-decoration:none;">
+        <div class="card" style="text-align:center;" data-reveal>
+          <div class="card__icon" style="margin:0 auto 16px;">🧭</div>
+          <h4>Systems Navigation</h4>
+        </div>
+      </a>
+      <a href="#resources" style="text-decoration:none;">
+        <div class="card" style="text-align:center;" data-reveal>
+          <div class="card__icon" style="margin:0 auto 16px;">📋</div>
+          <h4>Resources &amp; Tools</h4>
+        </div>
+      </a>
+      <a href="#training" style="text-decoration:none;">
+        <div class="card" style="text-align:center;" data-reveal>
+          <div class="card__icon" style="margin:0 auto 16px;">🏫</div>
+          <h4>Training &amp; Collaboration</h4>
+        </div>
+      </a>
     </div>
   </div>
 </section>
+
 <div class="divider"></div>
+
+<!-- ===== PROGRAM DETAILS ===== -->
 <section style="background:var(--cream);">
   <div class="container">
+
+    <!-- 1. Community Conversations -->
     <div class="program-full" id="conversations" data-reveal>
-      <div class="program-visual"><div class="program-visual__icon">💬</div><div class="program-visual__label">Community Conversations</div></div>
+      <div class="program-visual">
+        <div class="program-visual__icon">💬</div>
+        <div class="program-visual__label">Community Conversations</div>
+      </div>
       <div class="program-detail">
         <div class="section-tag">Program 01</div>
         <h2>Community Conversations &amp; Learning Spaces</h2>
         <p>Spaces shaped by lived experiences where individuals, families, and community members can gather to share, reflect, learn, and build connection.</p>
         <p>These gatherings create room for real conversations — ones that centre the knowledge, experiences, and voices of Black and African-descended community members.</p>
-        <ul><li>Facilitated community dialogue sessions</li><li>Learning spaces shaped by lived experience</li><li>Opportunities for reflection and collective sense-making</li><li>Connection across generations and community members</li></ul>
+        <ul>
+          <li>Facilitated community dialogue sessions</li>
+          <li>Learning spaces shaped by lived experience</li>
+          <li>Opportunities for reflection and collective sense-making</li>
+          <li>Connection across generations and community members</li>
+        </ul>
       </div>
     </div>
+
+    <!-- 2. Systems Navigation -->
     <div class="program-full reverse" id="navigation" data-reveal>
-      <div class="program-visual" style="background:linear-gradient(135deg,rgba(196,95,0,0.1),rgba(232,146,26,0.12));"><div class="program-visual__icon">🧭</div><div class="program-visual__label">Support &amp; Navigation</div></div>
+      <div class="program-visual" style="background:linear-gradient(135deg,rgba(196,95,0,0.1),rgba(232,146,26,0.12));">
+        <div class="program-visual__icon">🧭</div>
+        <div class="program-visual__label">Support &amp; Navigation</div>
+      </div>
       <div class="program-detail">
         <div class="section-tag">Program 02</div>
         <h2>Support &amp; Systems Navigation</h2>
         <p>Walking alongside individuals, families, and community with advocacy, connection, and support so no family has to navigate systems alone.</p>
         <p>We meet people where they are — offering guidance, advocacy, and connection as families move through education, health, social, and legal systems.</p>
-        <ul><li>One-on-one support and accompaniment</li><li>Advocacy alongside families in institutional settings</li><li>Connection to community resources and services</li><li>Guidance through complex systems with care</li></ul>
+        <ul>
+          <li>One-on-one support and accompaniment</li>
+          <li>Advocacy alongside families in institutional settings</li>
+          <li>Connection to community resources and services</li>
+          <li>Guidance through complex systems with care</li>
+        </ul>
       </div>
     </div>
+
+    <!-- 3. Resources & Tools -->
     <div class="program-full" id="resources" data-reveal>
-      <div class="program-visual" style="background:linear-gradient(135deg,rgba(245,185,66,0.15),rgba(232,146,26,0.1));"><div class="program-visual__icon">📋</div><div class="program-visual__label">Resources &amp; Advocacy Tools</div></div>
+      <div class="program-visual" style="background:linear-gradient(135deg,rgba(245,185,66,0.15),rgba(232,146,26,0.1));">
+        <div class="program-visual__icon">📋</div>
+        <div class="program-visual__label">Resources &amp; Advocacy Tools</div>
+      </div>
       <div class="program-detail">
         <div class="section-tag">Program 03</div>
         <h2>Resources &amp; Advocacy Tools</h2>
         <p>Practical guidance, resources, and accessible tools grounded in lived experiences and community knowledge.</p>
         <p>We develop materials that are practical, clear, and built around what families actually face — not generic resources, but tools shaped by real community insight.</p>
-        <ul><li>Plain-language guides for navigating systems</li><li>Advocacy tools grounded in community experience</li><li>Resources developed with and for families</li><li>Accessible materials in formats that work for community</li></ul>
+        <ul>
+          <li>Plain-language guides for navigating systems</li>
+          <li>Advocacy tools grounded in community experience</li>
+          <li>Resources developed with and for families</li>
+          <li>Accessible materials in formats that work for community</li>
+        </ul>
       </div>
     </div>
+
+    <!-- 4. Training & Collaboration -->
     <div class="program-full reverse" id="training" data-reveal>
-      <div class="program-visual" style="background:linear-gradient(135deg,rgba(154,69,0,0.08),rgba(196,95,0,0.12));"><div class="program-visual__icon">🏫</div><div class="program-visual__label">Training &amp; Collaboration</div></div>
+      <div class="program-visual" style="background:linear-gradient(135deg,rgba(154,69,0,0.08),rgba(196,95,0,0.12));">
+        <div class="program-visual__icon">🏫</div>
+        <div class="program-visual__label">Training &amp; Collaboration</div>
+      </div>
       <div class="program-detail">
         <div class="section-tag">Program 04</div>
         <h2>Training &amp; Collaboration</h2>
         <p>Community-rooted learning and collaboration that encourages reflection, accountability, meaningful engagement, and stronger community response.</p>
         <p>We work with schools, workplaces, and organizations to strengthen how they understand and respond to the needs of Black and African-descended children, youth, and families.</p>
-        <ul><li>Training for educators, administrators, and service providers</li><li>Organizational collaboration and consultation</li><li>Reflective learning that centres accountability</li><li>Building more responsive institutional environments</li></ul>
+        <ul>
+          <li>Training for educators, administrators, and service providers</li>
+          <li>Organizational collaboration and consultation</li>
+          <li>Reflective learning that centres accountability</li>
+          <li>Building more responsive institutional environments</li>
+        </ul>
         <a href="contact.html" class="btn btn--primary" style="margin-top:24px;">Inquire About Training</a>
       </div>
     </div>
+
   </div>
 </section>
+
+<!-- ===== EMAIL SIGNUP ===== -->
 <section class="section signup">
   <div class="container">
-    <div class="section-header"><div class="section-tag">Stay Informed</div><h2>Stay Up to Date</h2><p>Sign up to receive updates on upcoming sessions, new resources, and community opportunities as they develop.</p></div>
-    <form class="signup__form js-signup-form" novalidate><input type="email" class="signup__input" placeholder="Enter your email address" required aria-label="Email address" /><button type="submit" class="btn btn--primary">Sign Up</button></form>
+    <div class="section-header">
+      <div class="section-tag">Stay Informed</div>
+      <h2>Stay Up to Date</h2>
+      <p>Sign up to receive updates on upcoming sessions, new resources, and community opportunities as they develop.</p>
+    </div>
+    <form class="signup__form js-signup-form" novalidate>
+      <input type="email" class="signup__input" placeholder="Enter your email address" required aria-label="Email address" />
+      <button type="submit" class="btn btn--primary">Sign Up</button>
+    </form>
     <p style="text-align:center;font-size:0.82rem;color:var(--muted);margin-top:16px;">We respect your privacy. No spam, ever.</p>
   </div>
 </section>
+
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__brand">
         <a href="index.html" class="nav__logo">
-          <img src="Black%20Moms%20NB%20Logo.png" alt="Black Moms NB" style="height:60px;width:auto;display:block;" />
+          <img src="BlackMomsNBLogowhite.png" alt="Black Moms NB" style="height:60px;width:auto;display:block;" />
         </a>
-        <p style="margin-top:16px;">A community-rooted organization supporting Black and African-descended children, youth, families, and communities through connection, advocacy, learning, and collective care.</p>
+        <p>A community-rooted organization supporting Black and African-descended children, youth, families, and communities through connection, advocacy, learning, and collective care.</p>
         <p style="margin-top:12px;" class="footer__email">📧 <a href="mailto:Blackmomsnb@gmail.com" style="color:var(--amber-light);">Blackmomsnb@gmail.com</a></p>
       </div>
-      <div class="footer__col"><h4>Pages</h4><ul class="footer__links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="team.html">Our Team</a></li><li><a href="programs.html">Programs</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-      <div class="footer__col"><h4>Our Work</h4><ul class="footer__links"><li><a href="#conversations">Community Conversations</a></li><li><a href="#navigation">Systems Navigation</a></li><li><a href="#resources">Resources &amp; Tools</a></li><li><a href="#training">Training &amp; Collaboration</a></li></ul></div>
+      <div class="footer__col">
+        <h4>Pages</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Our Work</h4>
+        <ul class="footer__links">
+          <li><a href="#conversations">Community Conversations</a></li>
+          <li><a href="#navigation">Systems Navigation</a></li>
+          <li><a href="#resources">Resources &amp; Tools</a></li>
+          <li><a href="#training">Training &amp; Collaboration</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer__bottom"><span>&copy; 2025 Black Moms NB. All rights reserved.</span><span class="footer__note">Grounded in community. Focused on flourishing.</span></div>
+    <div class="footer__bottom">
+      <span>&copy; 2025 Black Moms NB. All rights reserved.</span>
+      <span class="footer__note">Grounded in community. Focused on flourishing.</span>
+    </div>
   </div>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>

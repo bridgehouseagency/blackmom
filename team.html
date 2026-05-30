@@ -10,30 +10,70 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:64px; }
-    @media(max-width:900px){.team-grid{grid-template-columns:repeat(2,1fr);}}
-    @media(max-width:580px){.team-grid{grid-template-columns:1fr;}}
-    .join-box { background:linear-gradient(135deg,var(--amber-pale),rgba(245,185,66,0.15)); border:1px solid rgba(232,146,26,0.2); border-radius:var(--radius-lg); padding:56px 48px; text-align:center; }
-    .join-box h3 { color:var(--dark); margin-bottom:12px; }
-    .join-box p { color:var(--muted); max-width:500px; margin:0 auto 28px; }
+    .team-intro {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 64px;
+    }
+    @media (max-width: 900px) {
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+      .team-grid { grid-template-columns: 1fr; }
+    }
+    .join-box {
+      background: linear-gradient(135deg, var(--amber-pale), rgba(245,185,66,0.15));
+      border: 1px solid rgba(232,146,26,0.2);
+      border-radius: var(--radius-lg);
+      padding: 56px 48px;
+      text-align: center;
+    }
+    .join-box h3 { color: var(--dark); margin-bottom: 12px; }
+    .join-box p { color: var(--muted); max-width: 500px; margin: 0 auto 28px; }
   </style>
 </head>
 <body>
+
+<!-- ===== NAVIGATION ===== -->
 <nav class="nav" id="nav">
-  <div class="container"><div class="nav__inner">
-    <a href="index.html" class="nav__logo">
-      <img src="Black%20Moms%20NB%20Logo.png" alt="Black Moms NB" style="height:60px;width:auto;display:block;" />
-    </a>
-    <ul class="nav__links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="team.html">Team</a></li><li><a href="programs.html">Programs</a></li><li><a href="contact.html">Contact</a></li></ul>
-    <div class="nav__cta"><a href="contact.html" class="btn btn--primary">Get Connected</a></div>
-    <button class="nav__hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
-  </div></div>
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="Black%20Moms%20NB%20Logo.png" alt="Black Moms NB" style="height:60px;width:auto;display:block;" />
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="contact.html" class="btn btn--primary">Get Connected</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
 </nav>
 <div class="nav__mobile" id="mobile-nav">
   <button class="nav__mobile-close" id="mobile-close">&times;</button>
-  <a href="index.html">Home</a><a href="about.html">About</a><a href="team.html">Team</a><a href="programs.html">Programs</a><a href="contact.html">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="team.html">Team</a>
+  <a href="programs.html">Programs</a>
+  <a href="contact.html">Contact</a>
   <a href="contact.html" class="btn btn--primary" style="margin-top:16px;">Get Connected</a>
 </div>
+
+<!-- ===== PAGE HERO ===== -->
 <div class="page-offset">
   <section class="page-hero">
     <div class="container page-hero__inner">
@@ -43,49 +83,137 @@
     </div>
   </section>
 </div>
+
+<!-- ===== TEAM ===== -->
 <section class="section" style="background:var(--cream);">
   <div class="container">
-    <div style="max-width:680px;margin:0 auto;text-align:center;" data-reveal>
+    <div class="team-intro" data-reveal>
       <div class="section-tag">Driven by Community</div>
       <h2>Grounded in Lived Experience</h2>
       <p>Our team is made up of community members who understand first-hand what Black and African-descended families navigate. We bring that lived knowledge to everything we do.</p>
     </div>
+
     <div class="team-grid">
-      <div class="team-card" data-reveal><div class="team-card__avatar"><div class="team-card__avatar-inner">👩🏾</div></div><div class="team-card__body"><h3>Founder &amp; Lead</h3><p class="team-card__role">Black Moms NB</p><p>Community advocate and organizer rooted in New Brunswick, leading the vision and day-to-day work of Black Moms NB.</p></div></div>
-      <div class="team-card" data-reveal><div class="team-card__avatar"><div class="team-card__avatar-inner">👩🏿</div></div><div class="team-card__body"><h3>Community Navigator</h3><p class="team-card__role">Support &amp; Systems</p><p>Works alongside families navigating education, health, and social systems — ensuring no family walks the path alone.</p></div></div>
-      <div class="team-card" data-reveal><div class="team-card__avatar"><div class="team-card__avatar-inner">👩🏾‍💼</div></div><div class="team-card__body"><h3>Resource &amp; Advocacy Lead</h3><p class="team-card__role">Resources &amp; Tools</p><p>Develops practical, accessible tools and advocacy resources grounded in community experience and knowledge.</p></div></div>
-      <div class="team-card" data-reveal><div class="team-card__avatar"><div class="team-card__avatar-inner">🧑🏿‍🤝‍🧑🏾</div></div><div class="team-card__body"><h3>Training &amp; Partnerships</h3><p class="team-card__role">Collaboration</p><p>Leads training initiatives and builds collaborative partnerships with schools, organizations, and institutions.</p></div></div>
-      <div class="team-card" data-reveal><div class="team-card__avatar"><div class="team-card__avatar-inner">👩🏽</div></div><div class="team-card__body"><h3>Community Engagement</h3><p class="team-card__role">Conversations &amp; Learning</p><p>Facilitates community conversations and learning spaces that centre lived experience and collective knowledge.</p></div></div>
-      <div class="team-card" data-reveal><div class="team-card__avatar" style="background:linear-gradient(135deg,rgba(232,146,26,0.12),rgba(196,95,0,0.08));"><div class="team-card__avatar-inner" style="font-size:2rem;color:var(--amber);">+</div></div><div class="team-card__body"><h3>You?</h3><p class="team-card__role">Community</p><p>We welcome collaborators, volunteers, and supporters who share our commitment to community-rooted change.</p><a href="contact.html" class="btn btn--outline" style="margin-top:16px;font-size:0.85rem;padding:10px 20px;">Get Involved</a></div></div>
+      <div class="team-card" data-reveal>
+        <div class="team-card__avatar">
+          <div class="team-card__avatar-inner">👩🏾</div>
+        </div>
+        <div class="team-card__body">
+          <h3>Founder &amp; Lead</h3>
+          <p class="team-card__role">Black Moms NB</p>
+          <p>Community advocate and organizer rooted in New Brunswick, leading the vision and day-to-day work of Black Moms NB.</p>
+        </div>
+      </div>
+
+      <div class="team-card" data-reveal>
+        <div class="team-card__avatar">
+          <div class="team-card__avatar-inner">👩🏿</div>
+        </div>
+        <div class="team-card__body">
+          <h3>Community Navigator</h3>
+          <p class="team-card__role">Support &amp; Systems</p>
+          <p>Works alongside families navigating education, health, and social systems — ensuring no family walks the path alone.</p>
+        </div>
+      </div>
+
+      <div class="team-card" data-reveal>
+        <div class="team-card__avatar">
+          <div class="team-card__avatar-inner">👩🏾‍💼</div>
+        </div>
+        <div class="team-card__body">
+          <h3>Resource &amp; Advocacy Lead</h3>
+          <p class="team-card__role">Resources &amp; Tools</p>
+          <p>Develops practical, accessible tools and advocacy resources grounded in community experience and knowledge.</p>
+        </div>
+      </div>
+
+      <div class="team-card" data-reveal>
+        <div class="team-card__avatar">
+          <div class="team-card__avatar-inner">🧑🏿‍🤝‍🧑🏾</div>
+        </div>
+        <div class="team-card__body">
+          <h3>Training &amp; Partnerships</h3>
+          <p class="team-card__role">Collaboration</p>
+          <p>Leads training initiatives and builds collaborative partnerships with schools, organizations, and institutions.</p>
+        </div>
+      </div>
+
+      <div class="team-card" data-reveal>
+        <div class="team-card__avatar">
+          <div class="team-card__avatar-inner">👩🏽</div>
+        </div>
+        <div class="team-card__body">
+          <h3>Community Engagement</h3>
+          <p class="team-card__role">Conversations &amp; Learning</p>
+          <p>Facilitates community conversations and learning spaces that centre lived experience and collective knowledge.</p>
+        </div>
+      </div>
+
+      <div class="team-card" data-reveal>
+        <div class="team-card__avatar" style="background:linear-gradient(135deg,rgba(232,146,26,0.12),rgba(196,95,0,0.08));">
+          <div class="team-card__avatar-inner" style="font-size:2rem;color:var(--amber);">+</div>
+        </div>
+        <div class="team-card__body">
+          <h3>You?</h3>
+          <p class="team-card__role">Community</p>
+          <p>We welcome collaborators, volunteers, and supporters who share our commitment to community-rooted change.</p>
+          <a href="contact.html" class="btn btn--outline" style="margin-top:16px;font-size:0.85rem;padding:10px 20px;">Get Involved</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- ===== JOIN ===== -->
 <section class="section" style="background:var(--white);">
   <div class="container">
     <div class="join-box" data-reveal>
       <div style="font-size:2.5rem;margin-bottom:16px;">🤝</div>
       <h3>Work With Us</h3>
-      <p>We collaborate with people and organizations who are committed to meaningful engagement and shared responsibility. If you’re interested in contributing, partnering, or volunteering, we’d love to hear from you.</p>
+      <p>We collaborate with people and organizations who are committed to meaningful engagement and shared responsibility. If you're interested in contributing, partnering, or volunteering, we'd love to hear from you.</p>
       <a href="contact.html" class="btn btn--primary">Reach Out</a>
     </div>
   </div>
 </section>
+
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__brand">
         <a href="index.html" class="nav__logo">
-          <img src="Black%20Moms%20NB%20Logo.png" alt="Black Moms NB" style="height:60px;width:auto;display:block;" />
+          <img src="BlackMomsNBLogowhite.png" alt="Black Moms NB" style="height:60px;width:auto;display:block;" />
         </a>
-        <p style="margin-top:16px;">A community-rooted organization supporting Black and African-descended children, youth, families, and communities through connection, advocacy, learning, and collective care.</p>
+        <p>A community-rooted organization supporting Black and African-descended children, youth, families, and communities through connection, advocacy, learning, and collective care.</p>
         <p style="margin-top:12px;" class="footer__email">📧 <a href="mailto:Blackmomsnb@gmail.com" style="color:var(--amber-light);">Blackmomsnb@gmail.com</a></p>
       </div>
-      <div class="footer__col"><h4>Pages</h4><ul class="footer__links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="team.html">Our Team</a></li><li><a href="programs.html">Programs</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-      <div class="footer__col"><h4>Our Work</h4><ul class="footer__links"><li><a href="programs.html#conversations">Community Conversations</a></li><li><a href="programs.html#navigation">Systems Navigation</a></li><li><a href="programs.html#resources">Resources &amp; Tools</a></li><li><a href="programs.html#training">Training &amp; Collaboration</a></li></ul></div>
+      <div class="footer__col">
+        <h4>Pages</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Our Work</h4>
+        <ul class="footer__links">
+          <li><a href="programs.html#conversations">Community Conversations</a></li>
+          <li><a href="programs.html#navigation">Systems Navigation</a></li>
+          <li><a href="programs.html#resources">Resources &amp; Tools</a></li>
+          <li><a href="programs.html#training">Training &amp; Collaboration</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer__bottom"><span>&copy; 2025 Black Moms NB. All rights reserved.</span><span class="footer__note">Grounded in community. Focused on flourishing.</span></div>
+    <div class="footer__bottom">
+      <span>&copy; 2025 Black Moms NB. All rights reserved.</span>
+      <span class="footer__note">Grounded in community. Focused on flourishing.</span>
+    </div>
   </div>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>
