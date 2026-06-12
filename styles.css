@@ -129,7 +129,7 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  min-height: 88px;
 }
 
 .nav__logo {
@@ -140,6 +140,20 @@ p:last-child { margin-bottom: 0; }
   font-size: 1.15rem;
   color: var(--dark);
   letter-spacing: -0.01em;
+}
+
+.nav__org-name {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--dark);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.footer__brand .nav__org-name { color: var(--white); }
+
+@media (max-width: 580px) {
+  .nav__org-name { display: none; }
 }
 
 .nav__logo-mark {
@@ -257,7 +271,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* ===== PAGE OFFSET ===== */
-.page-offset { padding-top: 72px; }
+.page-offset { padding-top: 88px; }
 
 /* ===== HERO ===== */
 .hero {
