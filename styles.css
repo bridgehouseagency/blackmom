@@ -152,8 +152,8 @@ p:last-child { margin-bottom: 0; }
 
 .footer__brand .nav__org-name { color: var(--white); }
 
-@media (max-width: 580px) {
-  .nav__org-name { display: none; }
+@media (max-width: 480px) {
+  .nav__org-name { font-size: 0.95rem; }
 }
 
 .nav__logo-mark {
@@ -402,7 +402,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .hero__scroll::after {
-  content: '↓';
+  content: '\2193';
   font-size: 1.1rem;
 }
 
@@ -865,4 +865,5 @@ p:last-child { margin-bottom: 0; }
   .section { padding: 64px 0; }
   .card { padding: 24px; }
   .program-card__body, .program-card__header { padding-left: 24px; padding-right: 24px; }
+  .nav__org-name { font-size: 0.95rem; }
 }
