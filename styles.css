@@ -152,8 +152,8 @@ p:last-child { margin-bottom: 0; }
 
 .footer__brand .nav__org-name { color: var(--white); }
 
-@media (max-width: 580px) {
-  .nav__org-name { display: none; }
+@media (max-width: 480px) {
+  .nav__org-name { font-size: 0.95rem; }
 }
 
 .nav__logo-mark {
